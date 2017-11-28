@@ -1,5 +1,6 @@
 package com.youmeek.ssm.module.user.controller;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.youmeek.ssm.module.user.pojo.SysUser;
 import com.youmeek.ssm.module.user.service.SysUserService;
 import org.slf4j.Logger;
@@ -33,7 +34,9 @@ public class SysUserController {
 	@ResponseBody
 	public SysUser showUser(@PathVariable("userId") Long userId){
 		SysUser user = sysUserService.getById(userId);
+		System.out.println("hello world");
 		return user;
+
 	}
 	
 	
