@@ -35,6 +35,7 @@ public class SysUserController {
 	public SysUser showUser(@PathVariable("userId") Long userId){
 		SysUser user = sysUserService.getById(userId);
 		System.out.println("hello world");
+		System.out.println(userId);
 		return user;
 
 	}
